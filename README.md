@@ -27,15 +27,15 @@ $ docker-compose up -d
 
 Run the image
 ```bash
-$ docker run -d dockerlamp_php
+$ docker run -d dockersdev300_php
 ```
 
 Verify if the image is working properly by opening a browser window and entering in the IP of the docker container.  To get the IP of a docker container, use docker inspect command:
 ```bash
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
-5da1be375d89        dockerlamp_php      "docker-php-entryp..."   22 minutes ago      Up 22 minutes       0.0.0.0:80->80/tcp   dockerlamp_php_1
-033cce66e515        dockerlamp_mysql    "docker-entrypoint..."   22 minutes ago      Up 22 minutes       3306/tcp             dockerlamp_mysql_1
+5da1be375d89        dockersdev300_php      "docker-php-entryp..."   22 minutes ago      Up 22 minutes       0.0.0.0:80->80/tcp   dockerlamp_php_1
+033cce66e515        dockersdev300_mysql    "docker-entrypoint..."   22 minutes ago      Up 22 minutes       3306/tcp             dockerlamp_mysql_1
 
 $ docker inspect 5da1be375d89 | grep "IPAddress"
             "SecondaryIPAddresses": null,
@@ -73,15 +73,15 @@ $ docker-compose up -d
 
 Run the image
 ```bash
-$ docker run -d dockerlamp_php
+$ docker run -d dockersdev300_php
 ```
 
 Verify if the image is working properly by opening a browser window and entering in the IP of the docker container.  To get the IP of a docker container, use docker inspect command:
 ```bash
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
-5da1be375d89        dockerlamp_php      "docker-php-entryp..."   22 minutes ago      Up 22 minutes       0.0.0.0:80->80/tcp   dockerlamp_php_1
-033cce66e515        dockerlamp_mysql    "docker-entrypoint..."   22 minutes ago      Up 22 minutes       3306/tcp             dockerlamp_mysql_1
+5da1be375d89        dockersdev300_php      "docker-php-entryp..."   22 minutes ago      Up 22 minutes       0.0.0.0:80->80/tcp   dockerlamp_php_1
+033cce66e515        dockersdev300_mysql    "docker-entrypoint..."   22 minutes ago      Up 22 minutes       3306/tcp             dockerlamp_mysql_1
 
 $ docker inspect 5da1be375d89 | grep "IPAddress"
             "SecondaryIPAddresses": null,
@@ -124,5 +124,6 @@ echo '<?php
 > ?>' > echo.php
 
 # run the script
-docker exec -it 5da1be375d89 php /var/www/html/echo.php```
+docker exec -it 5da1be375d89 php /var/www/html/echo.php
+```
 
